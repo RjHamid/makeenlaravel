@@ -29,6 +29,13 @@
           <a class="nav-link" href="/orders/list">دسته بندی</a>
         </li>
         </ul>
+        <li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle" href="/catgury/list" role="button" data-bs-toggle="dropdown">مقالات</a>
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="/catgury/create">ایجاد</a></li>
+  </ul>
+</li>
+
     </div>
   </nav>
 <h3>ثبت نام </h3>

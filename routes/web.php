@@ -155,3 +155,54 @@ Route::delete('/orders/delete/{id}', function ($id) {
 
     return redirect('/orders/list');
 });
+// catgury Get Routes
+Route::get('catgury/create', function(){
+    return view('catgury/create');
+});
+
+
+Route::get('/catgury/edit/{id}', function ($id) {
+
+    $catgury = DB::table('catgury')->where('id', $id)->first();
+    return view('catgury.edit', ['catgury' => $catgury]);
+
+});
+
+Route::get('/catgury/list', function () {
+ $catgury = DB::table('catgury')->get();
+ return view('catgury.list', ["catgury" => $catgury]);
+
+});
+
+// orders Post Routes
+Route::post('/catgury/create', function (Request $request) {
+DB::table('catgury')->insert([
+    "Write" => $request->Write,
+    "Article" => $request->Article,
+    "Descr" => $request->Descr,
+]);
+return redirect('/catgury/create');
+});
+
+Route::post('/catgury/edit/{id}', function (Request $request, $id) {
+
+    DB::table('catgury')->where('id', $id)->update([
+        "Write" => $request->Write,
+        "Article" => $request->Article,
+        "Descr" => $request->Descr,
+    ]);
+
+    return redirect('/catgury/list');
+});
+
+// catgury Delete Route
+Route::delete('/catgury/delete/{id}', function ($id) {
+
+    DB::table('catgury')->where('id', $id)->delete();
+
+    return redirect('/catgury/list');
+});
+// post Get Routes
+Route::get('post/create', function(){
+    return view('post/create');
+});
