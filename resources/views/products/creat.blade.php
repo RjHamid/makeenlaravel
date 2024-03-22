@@ -26,12 +26,25 @@
           <a class="nav-link" href="/orders/create">سفارشات</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/orders/list">دسته بندی</a>
+          <a class="nav-link" href="/orders/list"> لیست سفارشات</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/catgury/create">ایجاد دسته‌بندی</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/catgury/list">دسته‌بندی</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/post/create">ایجاد پست</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/post/list">پست</a>
         </li>
         </ul>
+ 
     </div>
   </nav>
-<form action="/products/create" method="post">
+<form action="{{ route('products.creat') }}" method="post">
   @csrf
       <div class="mb-3 mt-3">
         <label for="name" class="form-label">اسم محصول :</label>

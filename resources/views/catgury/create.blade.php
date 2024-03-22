@@ -26,31 +26,34 @@
           <a class="nav-link" href="/orders/create">سفارشات</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/orders/list">دسته بندی</a>
+          <a class="nav-link" href="/orders/list"> لیست سفارشات</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/catgury/create">ایجاد دسته‌بندی</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/catgury/list">دسته‌بندی</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/post/create">ایجاد پست</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="/post/list">پست</a>
         </li>
         </ul>
-        <li class="nav-item dropdown">
-  <a class="nav-link dropdown-toggle" href="/catgury/list" role="button" data-bs-toggle="dropdown">مقالات</a>
-  <ul class="dropdown-menu">
-    <li><a class="dropdown-item" href="/catgury/create">ایجاد</a></li>
-  </ul>
-</li>
-
+ 
     </div>
   </nav>
-    <form action="/catgury/create" method="post">
-      @csrf
-<input type="text" class="form-control" placeholder="مقالات" name="Write">
-<select class="form-select" name="Article">
-    <option value="pezashki">پزشکی</option>
-    <option value="amozeshi"> آموزشی</option>
-    <option value="php">php</option>
-</select>
-<textarea class="form-control" rows="5" id="comment" name="Descr"></textarea>
-<input type="submit" value="send">
+  <form action="{{ route('catgury.creat') }}" method="post">
+  @csrf
+    <label for="category_name">نام دسته‌بندی:</label><br>
+    <input type="text" id="category_name" name="category_name"><br><br>
+
+    <label for="description">توضیحات:</label><br>
+    <textarea id="description" name="description"></textarea><br><br>
+
+    <input type="submit" value="افزودن دسته‌بندی">
 </form>
+
 </body>
 </html>

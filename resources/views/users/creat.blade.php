@@ -26,20 +26,26 @@
           <a class="nav-link" href="/orders/create">سفارشات</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/orders/list">دسته بندی</a>
+          <a class="nav-link" href="/orders/list"> لیست سفارشات</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/catgury/create">ایجاد دسته‌بندی</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/catgury/list">دسته‌بندی</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/post/create">ایجاد پست</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/post/list">پست</a>
         </li>
         </ul>
-        <li class="nav-item dropdown">
-  <a class="nav-link dropdown-toggle" href="/catgury/list" role="button" data-bs-toggle="dropdown">مقالات</a>
-  <ul class="dropdown-menu">
-    <li><a class="dropdown-item" href="/catgury/create">ایجاد</a></li>
-  </ul>
-</li>
-
+ 
     </div>
   </nav>
 <h3>ثبت نام </h3>
-    <form action="/users/create" method="post">
+    <form action="{{ route('user.creat') }}" method="post">
     @csrf
         <div class="mb-3 mt-3">
             <label for="name" class="form-label">نام :</label>

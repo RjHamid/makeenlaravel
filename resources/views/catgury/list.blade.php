@@ -26,19 +26,22 @@
           <a class="nav-link" href="/orders/create">سفارشات</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/orders/list">دسته بندی</a>
+          <a class="nav-link" href="/orders/list"> لیست سفارشات</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/post/create">پست</a>
+          <a class="nav-link" href="/catgury/create">ایجاد دسته‌بندی</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/catgury/list">دسته‌بندی</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/post/create">ایجاد پست</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/post/list">پست</a>
         </li>
         </ul>
-        <li class="nav-item dropdown">
-  <a class="nav-link dropdown-toggle" href="/catgury/list" role="button" data-bs-toggle="dropdown">مقالات</a>
-  <ul class="dropdown-menu">
-    <li><a class="dropdown-item" href="/catgury/create">ایجاد</a></li>
-  </ul>
-</li>
-
+ 
     </div>
   </nav>
 <div class="container mt-3">
@@ -53,9 +56,8 @@
           @foreach ($catgury as $catgury )
           <tbody>   
             <td>{{ $catgury->id }}</td>
-            <td>{{ $catgury->Write }}</td>
-            <td>{{ $catgury->Article }}</td>
-            <td>{{ $catgury->Descr }}</td>
+            <td>{{ $catgury->category_name }}</td>
+            <td>{{ $catgury->description }}</td>
             <td> <a href="/catgury/edit/{{ $catgury->id }}"><button type="submit">ویرایش</button></a></td>
             <td><form action="/catgury/delete/{{ $catgury->id }}" method="post">
                         @csrf

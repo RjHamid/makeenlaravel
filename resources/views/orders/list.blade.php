@@ -26,9 +26,22 @@
           <a class="nav-link" href="/orders/create">سفارشات</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/orders/list">دسته بندی</a>
+          <a class="nav-link" href="/orders/list"> لیست سفارشات</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/catgury/create">ایجاد دسته‌بندی</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/catgury/list">دسته‌بندی</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/post/create">ایجاد پست</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/post/list">پست</a>
         </li>
         </ul>
+ 
     </div>
   </nav>
 <div class="container mt-3">
